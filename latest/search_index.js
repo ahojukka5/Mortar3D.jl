@@ -65,11 +65,19 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "api.html#Mortar3D.calculate_normals-Tuple{Any,Any,Any}",
+    "page": "API",
+    "title": "Mortar3D.calculate_normals",
+    "category": "Method",
+    "text": "calculate_normals(elements::Dict{Int, Vector{Int}},\n                  element_types::Dict{Int, Symbol},\n                  X::Dict{Int, Vector{Float64})\n\nGiven elements, element types and node locations, calculate nodal normals by first calculating normal directions for each element and then averaging them in nodes. As a result we get unique normal direction defined to each node.\n\nNotes\n\nOnly linear elements supported.\n\nExample\n\nX = Dict(1 => [0.0, 0.0, 0.0], 2 => [1.0, 0.0, 0.0], 3 => [0.0, 1.0, 0.0])\nelements = Dict(1 => [1, 2, 3])\nelement_types = Dict(1 => :Tri3)\nnormals = calculate_normals(elements, element_types, X)\n\n# output\n\nDict{Int64,Array{Float64,1}} with 3 entries:\n  2 => [0.0, 0.0, 1.0]\n  3 => [0.0, 0.0, 1.0]\n  1 => [0.0, 0.0, 1.0]\n\n\n\n\n"
+},
+
+{
     "location": "api.html#Index-1",
     "page": "API",
     "title": "Index",
     "category": "section",
-    "text": "DocTestSetup = quote\n    using Mortar3D\nendModules = [Mortar3D]"
+    "text": "DocTestSetup = quote\n    using Mortar3D\n    using Mortar3D: calculate_normals\nendModules = [Mortar3D]"
 },
 
 ]}
