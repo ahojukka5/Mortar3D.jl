@@ -73,11 +73,27 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "api.html#Mortar3D.project_from_plane_to_surface-Tuple{Type{Val{:Tri3}},Any,Any,Any,Any,Any}",
+    "page": "API",
+    "title": "Mortar3D.project_from_plane_to_surface",
+    "category": "Method",
+    "text": "project_from_plane_to_surface(Val{:Tri3}, p, n, x1, x2, x3)\n\nProject vertex p to surface of Tri3 element.\n\nExample\n\np = [1/3, 1/3, 0.0]\nn = [0.0, 0.0, 1.0]\nx1 = [0.0, 0.0, 1.0]\nx2 = [1.0, 0.0, 1.0]\nx3 = [0.0, 1.0, 1.0]\ntheta, d = project_from_plane_to_surface(Val{:Tri3}, p, n, x1, x2, x3)\nround.(theta, 3), d\n\n# output\n\n([0.333, 0.333], 1.0)\n\n\n\n"
+},
+
+{
+    "location": "api.html#Mortar3D.project_from_surface_to_plane-Tuple{Any,Any,Any}",
+    "page": "API",
+    "title": "Mortar3D.project_from_surface_to_plane",
+    "category": "Method",
+    "text": "project_from_surface_to_plane(p, x0, n0)\n\nFind the projection of vertex p to the auxiliary plane (x0, n0), where x0 is the origo of plane and n0 is unit normal of plane.\n\nExample\n\np = [1.0, 1.0, 3.0]\nx0 = [0.0, 0.0, 0.0]\nn0 = [0.0, 0.0, 1.0]\nproject_from_surface_to_plane(p, x0, n0)\n\n# output\n3-element Array{Float64,1}:\n 1.0\n 1.0\n 0.0\n\n\n\n\n"
+},
+
+{
     "location": "api.html#Index-1",
     "page": "API",
     "title": "Index",
     "category": "section",
-    "text": "DocTestSetup = quote\n    using Mortar3D\n    using Mortar3D: calculate_normals\nendModules = [Mortar3D]"
+    "text": "DocTestSetup = quote\n    using Mortar3D\n    using Mortar3D: calculate_normals\n    using Mortar3D: project_from_plane_to_surface, project_from_surface_to_plane\nendModules = [Mortar3D]"
 },
 
 ]}
