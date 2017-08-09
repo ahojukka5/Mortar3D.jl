@@ -3,4 +3,5 @@
 
 module Mortar3D
 include("calculate_normals.jl")
+include("calculate_projections.jl")
 end
