@@ -133,7 +133,7 @@ P = calculate_polygon_clip(xs, xm, n)
 
 ```
 """
-function calculate_polygon_clip{T}(xs::Vector{T}, xm::Vector{T}, n::T)
+function calculate_polygon_clip(xs::Vector{T}, xm::Vector{T}, n::T) where T
     # objective: search does line xm1 - xm2 clip xs
     nm = length(xm)
     ns = length(xs)
