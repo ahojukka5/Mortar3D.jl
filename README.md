@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/JuliaFEM/Mortar3D.jl.svg?branch=master)](https://travis-ci.org/JuliaFEM/Mortar3D.jl)[![Coverage Status](https://coveralls.io/repos/github/JuliaFEM/Mortar3D.jl/badge.svg?branch=master)](https://coveralls.io/github/JuliaFEM/Mortar3D.jl?branch=master)[![](https://img.shields.io/badge/docs-stable-blue.svg)](https://juliafem.github.io/Mortar3D.jl/stable)[![](https://img.shields.io/badge/docs-latest-blue.svg)](https://juliafem.github.io/Mortar3D.jl/latest)[![Issues](https://img.shields.io/github/issues/JuliaFEM/Mortar3D.jl.svg)](https://github.com/JuliaFEM/Mortar3D.jl/issues)
 
 Mortar3D.jl is a Julia package to calculate discrete projections between
-non-conforming finite element mesheds. The resulting "mortar matrices" can
+non-conforming finite element meshes. The resulting "mortar matrices" can
 be used to tie non-conforming finite element meshes together which are meshed
 separately to construct bigger models.
 
